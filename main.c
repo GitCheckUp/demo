@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 int* load(int*c,char filename[]){   //Load file into array.
+	//IMPORTANT NOTICE: the function uses "c" variable to assign number of unsorted integers to perform further operations on the list. A global variable c should be exist in the main.
 	FILE *fp;
 	int temp,i,count;
 	int *toBeSorted;

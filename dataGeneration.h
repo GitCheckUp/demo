@@ -16,5 +16,5 @@ void createData(int size, char *name){
 	
 	fprintf(file,"%d\n", size);
 	for (i=0;i<size;i++)
-		fprintf(file,"%d\n", rand());
+		fprintf(file,"%d\n", rand()%1000);
 }

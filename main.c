@@ -4,29 +4,60 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int* load(int*c,char filename[]){   //Load file into array.
-	//IMPORTANT NOTICE: the function uses "c" variable to assign number of unsorted integers to perform further operations on the list. A global variable c should be exist in the main.
+
+int* load(char *);
+int showMenu();
+int c;  //Global count variable: number of integers.
+
+int main(){
+	int i;
+	int key=1;
+	
+	int *arrayToBeSorted;  //Holds the array of integers to be sorted.
+	
+	while(key==1){
+		switch(showMenu()){     //Sample Menu
+			case 1: createData(5,"deneme.txt");break;
+			case 2: arrayToBeSorted = load("deneme.txt");break;
+			case 3: insertionSort(arrayToBeSorted,c);break;
+			case 4: shellSort(arrayToBeSorted,c);break;
+			case 5: key=0;
+		}
+	
+	for(i=0;i<c;i++){   //Just to be sure sorting algorithms work.
+		printf("%d\n",arrayToBeSorted[i]);
+	}
+}
+	return 0;
+}
+
+int* load(char filename[]){
 	FILE *fp;
 	int temp,i,count;
 	int *toBeSorted;
     fp=fopen(filename,"r");
     	/*Check*/	if(fp==NULL) printf("Error at fopen()\n");
     toBeSorted = (int*) malloc(sizeof(int));
-    fscanf(fp, "%d\n", &count);   //Read the first line to get the set size.
+    fscanf(fp, "%d\n", &count);
+    c = count;
     toBeSorted=(int*) malloc(sizeof(int)*(count));
     	/*Check*/	if(toBeSorted==NULL) printf("Error: @memory allocation.\n");
     for(i=0; i<count; i++) {
     	fscanf(fp,"%d",&temp);
     	toBeSorted[i]=temp;
     }
-    *c=count; //Assign the number of entries.
     fclose(fp);
     return toBeSorted;
 }
 
-void main(){
-	int *x;
-	insertionSort(x,0);
-	createData(5,"deneme.txt");  
-	return;
+int showMenu(){
+	int selection;
+	printf("1) Generate data\n");
+	printf("2) Load\n");
+	printf("3) Insertion Sort\n");
+	printf("4) Shell Sort\n");
+	printf("5) Exit\n");
+	
+	scanf("%d", &selection);
+	return selection;
 }

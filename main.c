@@ -1,5 +1,5 @@
 #include "insertionSort.h"  //insertion sort header
-#include "dataGeneration.h"  //USAGE: createData(integer size, "name_of_file")
+//#include "dataGeneration.h"  //USAGE: createData(integer size, "name_of_file")
 
 #include <stdio.h>
 #include <stdlib.h>

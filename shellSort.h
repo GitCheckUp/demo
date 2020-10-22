@@ -1,4 +1,4 @@
-int shellSort(int arr[], int n) 
+void shellSort(int arr[], int n) 
 { 
 	for (int gap = n/2; gap > 0; gap/= 2){
 		for (int i = gap; i < n; i += 1){
@@ -11,5 +11,4 @@ int shellSort(int arr[], int n)
 			arr[j] = temp;
 		}
 	}
-	
 } 

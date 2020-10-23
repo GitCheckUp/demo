@@ -17,7 +17,7 @@ int main(){
 	
 	while(key==1){
 		switch(showMenu()){     //Sample Menu
-			case 1: createData(5,"deneme.txt");break;
+			case 1: createData(500,"deneme.txt");break;
 			case 2: arrayToBeSorted = load("deneme.txt");break;
 			case 3: insertionSort(arrayToBeSorted,c);break;
 			case 4: shellSort(arrayToBeSorted,c);break;

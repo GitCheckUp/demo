@@ -8,13 +8,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 void createData(int size, char *name){
-	int i;
+	int k;
 	FILE *file;
 	file = fopen(name,"w+");
 	
 	srand(time(NULL));
 	
 	fprintf(file,"%d\n", size);
-	for (i=0;i<size;i++)
+	for (k=0;k<size;k++)
 		fprintf(file,"%d\n", rand()%1000);
+	fclose(file);
 }

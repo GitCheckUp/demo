@@ -7,7 +7,9 @@
 
 int* load(char *);
 int showMenu();
+void findRepetitives(int arr[],int len);
 int c;  //Global count variable: number of integers.
+
 
 int main(){
 	int i;
@@ -60,4 +62,22 @@ int showMenu(){
 	
 	scanf("%d", &selection);
 	return selection;
+}
+
+void findRepetitives(int arr[],int len){
+	int i;
+	for(i=1;i<len;i++){
+		if(arr[i]==arr[i-1]){
+			printf("Value %d repeats in the array \n",arr[i]);
+			if(i==len-1)
+				break;
+			else{
+				while(arr[i]==arr[i+1]){
+					i++;
+					if(i==len-1)
+						break;
+					}
+				}
+			}
+		}
 }

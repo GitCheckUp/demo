@@ -13,6 +13,7 @@ int c;  //Global count variable: number of integers.
 
 
 int main(){
+	int i = 42;
 	int i;
 	int key=1;
 	

@@ -14,6 +14,7 @@ int c;  //Global count variable: number of integers.
 
 int main(){
 	int i;
+	int f;
 	int key=1;
 	
 	int *arrayToBeSorted;  //Holds the array of integers to be sorted.

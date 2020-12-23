@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//I am living in a world of darkness.
 
 int* load(char *);
 int showMenu();

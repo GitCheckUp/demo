@@ -9,7 +9,7 @@ int* load(char *);
 int showMenu();
 void findRepetitives(int arr[],int len);
 int c;  //Global count variable: number of integers.
-
+int test;
 
 int main(){
 	int i;

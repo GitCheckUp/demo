@@ -11,7 +11,7 @@ void findRepetitives(int arr[],int len);
 int c;  //Global count variable: number of integers.
 int test;
 
-int main(){
+int main(){ 
 	int i;
 	int f;
 	int key=1;
